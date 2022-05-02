@@ -4366,6 +4366,8 @@ ul.dots-text {
   width: 30px;
   height: 30px;
   z-index: 20; }
+  .slider-gallery__next.swiper-button-disabled {
+    opacity: 0.3; }
   .slider-gallery__next::before {
     content: "";
     position: absolute;
@@ -4389,6 +4391,8 @@ ul.dots-text {
   width: 30px;
   height: 30px;
   z-index: 20; }
+  .slider-gallery__prev.swiper-button-disabled {
+    opacity: 0.3; }
   .slider-gallery__prev::before {
     content: "";
     position: absolute;
