@@ -301,7 +301,7 @@ document.addEventListener(
 
 		let productRow = document.querySelector(".product__row");
 		window.onload = () => {
-			if (productRow != null) {
+			if (productRow != null && document.documentElement.clientWidth >= 900) {
 				productRow.style.minHeight = productRow.offsetHeight + document.querySelector(".product__tab-content.active").offsetHeight + "px";
 			}
 		};

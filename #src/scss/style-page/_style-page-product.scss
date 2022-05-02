@@ -1305,8 +1305,8 @@ ul.dots-text {
 		top: 50%;
 		right: 20px;
 		transform: translate(0, -50%) rotate(180deg);
-		width: 11px;
-		height: 19px;
+		width: 30px;
+		height: 30px;
 		z-index: 20;
 
 		&::before {
@@ -1329,8 +1329,8 @@ ul.dots-text {
 		top: 50%;
 		left: 20px;
 		transform: translate(0, -50%);
-		width: 11px;
-		height: 19px;
+		width: 30px;
+		height: 30px;
 		z-index: 20;
 
 		&::before {
@@ -1353,7 +1353,9 @@ ul.dots-text {
 		&__slider {
 			margin: 0 -15px 15px -15px;
 		}
+	}
 
+	.slider-gallery {
 		&__next {
 			display: block;
 		}
