@@ -1,84 +1,7 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
-		// document.addEventListener("click", function (e) {
-		// 	e.preventDefault();
-		// 	let element = e.target;
 
-		// 	if (element.closest(".zoom-gallery-container") && element.closest("[data-zoom]")) {
-		// 		let sliderZoom;
-
-		// 		let zoomGallerys = document.querySelector(".zoom-gallery");
-
-		// 		if (zoomGallerys != null) {
-		// 			zoomGallerys.remove();
-		// 		}
-
-
-
-		// 		let arrImages = element.closest(".zoom-gallery-container").querySelectorAll("[data-zoom]");
-
-		// 		arrImages.forEach((element) => {
-		// 			let clone = zoomGallerys.querySelector("template").content.cloneNode(true);
-
-		// 			clone.querySelector("img").setAttribute("src", element.dataset.zoom);
-
-		// 			zoomGallerys.querySelector(".zoom-gallery__wrapper").append(clone);
-		// 		});
-
-		// 		sliderZoom = new Swiper(zoomGallerys.querySelector(".zoom-gallery__slider"), {
-		// 			slidesPerView: 1,
-		// 			spaceBetween: 20,
-		// 			watchOverflow: true,
-		// 			observer: true,
-		// 			observeParents: true,
-		// 			zoom: true,
-
-		// 			navigation: {
-		// 				nextEl: zoomGallerys.querySelector(".zoom-gallery__next"),
-		// 				prevEl: zoomGallerys.querySelector(".zoom-gallery__prev"),
-		// 			},
-		// 		});
-
-		// 	}
-		// });
-
-		// if (zoomGallerys.length > 0) {
-		// 	zoomGallerys.forEach((element) => {
-		// 		let zoomSlider = new Swiper(element.querySelector(".zoom-gallery__slider"), {
-		// 			slidesPerView: 1,
-		// 			spaceBetween: 20,
-		// 			watchOverflow: true,
-		// 			observer: true,
-		// 			observeParents: true,
-		// 			zoom: true,
-
-		// 			navigation: {
-		// 				nextEl: element.querySelector(".zoom-gallery__next"),
-		// 				prevEl: element.querySelector(".zoom-gallery__prev"),
-		// 			},
-
-		// 			on: {
-		// 				slideChangeTransitionEnd: function () {},
-		// 			},
-		// 		});
-		// 	});
-		// }
-
-		// let arrGallItem = document.querySelectorAll(".gallery-product__item");
-
-		// arrGallItem.forEach((element) => {
-		// 	element.addEventListener("click", function (e) {
-		// 		e.preventDefault();
-		// 		document.querySelector("body").classList.toggle("lock");
-		// 		document.querySelector(".zoom-gallery").classList.toggle("--show");
-		// 	});
-		// });
-
-		// document.querySelector(".zoom-gallery__close").addEventListener("click", function () {
-		// 	document.querySelector("body").classList.toggle("lock");
-		// 	document.querySelector(".zoom-gallery").classList.toggle("--show");
-		// });
 
 		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
@@ -148,6 +71,8 @@ document.addEventListener(
 			watchOverflow: true,
 			spaceBetween: 20,
 		});
+
+
 
 		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)"), window.matchMedia("(max-width: 900px)")];
 
@@ -739,8 +664,10 @@ document.addEventListener(
 		}
 
 		// Отслеживание видео в карточке
+		// Отслеживание видео в карточке
 		let productVideo = document.querySelector(".gallery-product__video");
 		let containerVideo = document.querySelector(".gallery-product__item.--video");
+		let imageBig = document.querySelector(".gallery-product__item.--big");
 
 		if (productVideo != null) {
 			let intersectionObserver = new IntersectionObserver(function (entries) {
@@ -753,7 +680,28 @@ document.addEventListener(
 				}
 			});
 
-			intersectionObserver.observe(productVideo);
+			function addObserv() {
+				if (!match[2].matches) {
+					intersectionObserver.observe(productVideo);
+					if (imageBig != null) {
+						let videoCloned = imageBig.querySelector(".gallery-product__video");
+
+						if (videoCloned != null) {
+							videoCloned.remove();
+
+							containerVideo ? containerVideo.classList.remove("--clone") : null;
+						}
+					}
+				} else {
+					intersectionObserver.unobserve(productVideo);
+					productVideo.pause();
+					productVideo.currentTime = 0;
+					containerVideo ? containerVideo.classList.remove("show") : null;
+				}
+			}
+
+			addObserv();
+			match[2].addListener(addObserv);
 		}
 
 		const da = new DynamicAdapt("max");
@@ -1038,86 +986,6 @@ document.addEventListener(
 			});
 		}
 
-		// СЕО фильтр
-		// let seoFilter = document.querySelectorAll(".seo-filter");
-
-		// if (seoFilter.length > 0) {
-		// 	seoFilter.forEach((element, index, array) => {
-		// 		let elLink = element.querySelectorAll(".seo-filter__item");
-		// 		let buttonAll = element.querySelector(".seo-filter__all");
-
-		// 		let indexHiden;
-
-		// 		if (element.classList.contains("--top")) {
-		// 			indexHiden = 5;
-		// 		}
-
-		// 		if (element.classList.contains("--bottom")) {
-		// 			indexHiden = 8;
-		// 		}
-
-		// 		if (elLink.length > indexHiden) {
-		// 			elLink.forEach((el, i, arr) => {
-		// 				if (i > indexHiden - 1) {
-		// 					el.classList.add("--hidden");
-
-		// 					el.style.height = "0";
-		// 					el.style.marginBottom = "0";
-
-		// 					el.style.display = "none";
-		// 				}
-		// 			});
-
-		// 			if (buttonAll != null) {
-		// 				buttonAll.addEventListener("click", function () {
-		// 					this.classList.toggle("--show");
-
-		// 					if (element.classList.contains("--bottom")) {
-		// 						if (this.classList.contains("--show")) {
-		// 							this.textContent = "скрыть все";
-		// 						} else {
-		// 							this.textContent = "раскрыть все";
-		// 						}
-		// 					}
-
-		// 					elLink.forEach((el, i) => {
-		// 						if (i > indexHiden - 1) {
-		// 							if (el.classList.contains("--hidden")) {
-		// 								el.classList.remove("--hidden");
-
-		// 								el.style.display = "initial";
-
-		// 								el.style.height = el.querySelector("a").clientHeight + "px";
-
-		// 								setTimeout(() => {
-		// 									el.style.removeProperty("height");
-		// 								}, 310);
-
-		// 								el.style.removeProperty("margin-bottom");
-		// 							} else {
-		// 								el.classList.add("--hidden");
-
-		// 								el.style.height = el.querySelector("a").clientHeight + "px";
-
-		// 								setTimeout(() => {
-		// 									el.style.height = "0";
-		// 								}, 0);
-
-		// 								setTimeout(() => {
-		// 									el.style.display = "none";
-		// 								}, 310);
-
-		// 								el.style.marginBottom = "0";
-		// 							}
-		// 						}
-		// 					});
-		// 				});
-		// 			}
-		// 		} else {
-		// 			buttonAll ? (buttonAll.style.display = "none") : null;
-		// 		}
-		// 	});
-		// }
 
 		let seoFilter = document.querySelectorAll(".seo-filter");
 
@@ -1210,6 +1078,213 @@ document.addEventListener(
 				}
 			});
 		}
+
+		let sliderProductGall;
+
+		let prodArrImages = document.querySelectorAll(".gallery-product__item");
+
+		function changeSlideGall(e) {
+			e.stopPropagation();
+			e.preventDefault();
+
+			let targetEl = e.target.closest(".gallery-product__item");
+
+			let prodArrImages = Array.prototype.slice.call(document.querySelectorAll(".gallery-product__item"));
+
+			let index = prodArrImages.indexOf(targetEl);
+			
+			prodArrImages.forEach(el => el.classList.remove("active"));
+
+			targetEl.classList.add("active");
+
+			sliderProductGall.slideTo(index, 300, false);
+		}
+
+		function activeGallSliderMob() {
+			if (match[2].matches) {
+				sliderProductGall = new Swiper(".slider-gallery__container", {
+					slidesPerView: 1,
+					watchOverflow: true,
+					spaceBetween: 20,
+
+					navigation: {
+						nextEl: ".slider-gallery__next",
+						prevEl: ".slider-gallery__prev",
+					},
+					
+					on: {
+						init(swiper) {
+							prodArrImages[swiper.activeIndex].classList.add("active");
+						},
+
+						slideChange(swiper) {
+							let currentslide = swiper.slides[swiper.activeIndex];
+							let video = currentslide.querySelector("video");
+							if (video != null) {
+								video.currentTime = 0;
+								video.play();
+							}
+
+							prodArrImages.forEach(el => el.classList.remove("active"));
+							prodArrImages[swiper.activeIndex].classList.add("active");
+						},
+					}
+				});
+
+				prodArrImages.forEach( function(element, index, array) {
+					element.addEventListener("click", changeSlideGall);
+				});
+			} else {
+				if (sliderProductGall != undefined) {
+					sliderProductGall.destroy();
+
+					prodArrImages.forEach( function(element, index, array) {
+						element.classList.remove("active")
+						element.removeEventListener("click", changeSlideGall);
+					});
+				}
+			}
+		}
+
+		match[2].addListener(activeGallSliderMob);
+		activeGallSliderMob()
+
+		document.addEventListener("click", function (e) {
+			let element = e.target,
+				body = document.body
+
+			if (element.closest(".zoom-gallery-container") && element.closest("[data-zoom]")) {
+				e.preventDefault();
+		
+				let zoomGallerys = document.querySelector(".zoom-gallery");
+				let arrImages = Array.prototype.slice.call(element.closest(".zoom-gallery-container").querySelectorAll("[data-zoom]"));
+		
+				if (zoomGallerys != null) {
+					zoomGallerys.remove();
+				}
+		
+				let galleryZoom = document.createElement("div");
+				galleryZoom.classList.add("zoom-gallery");
+		
+				if (element.closest(".gallery-block-text")) {
+					galleryZoom.classList.add("zoom-gallery-block-text");
+				}
+		
+				body.append(galleryZoom);
+		
+				galleryZoom.innerHTML = `
+					<div class="zoom-gallery__close"></div>
+					<div class="zoom-gallery__slider swiper-container">
+						<div class="zoom-gallery__prev"></div>
+						<div class="zoom-gallery__wrapper swiper-wrapper">
+		
+						</div>
+						<div class="zoom-gallery__next"></div>
+					</div>
+		
+					<template>
+						<div class="zoom-gallery__slide swiper-slide">
+							<div class="swiper-zoom-container">
+								<img src="" alt="">
+							</div>
+						</div>
+					</template>
+				`;
+		
+				[...new Set(arrImages.map(el => el.dataset.zoom))].forEach((element) => {
+					let clone = galleryZoom.querySelector("template").content.cloneNode(true);
+		
+					clone.querySelector("img").setAttribute("src", element);
+		
+					galleryZoom.querySelector(".zoom-gallery__wrapper").append(clone);
+				});
+		
+				let sliderZoom = new Swiper(galleryZoom.querySelector(".zoom-gallery__slider"), {
+					slidesPerView: 1,
+					initialSlide: arrImages.indexOf(element.closest("[data-zoom]")),
+					spaceBetween: 20,
+					watchOverflow: true,
+					observer: true,
+					observeParents: true,
+					zoom: true,
+		
+					on: {
+						zoomChange: (swiper, scale, imageEl, slideEl) => {
+							if (scale == 1) {
+								setTimeout(() => {
+									imageEl.style.transition = "none";
+								}, 300);
+							} else {
+								imageEl.style.transition = "transform";
+							}
+						},
+		
+						afterInit: (swiper) => {
+							body.classList.add("lock");
+							setTimeout(() => {
+								galleryZoom.style.opacity = 1;
+								galleryZoom.style.transition = "all 0.3s ease";
+								// fadeIn(galleryZoom, 600, body);
+							}, 100);
+						},
+					},
+		
+					navigation: {
+						nextEl: galleryZoom.querySelector(".zoom-gallery__next"),
+						prevEl: galleryZoom.querySelector(".zoom-gallery__prev"),
+					},
+				});
+		
+				galleryZoom.querySelector(".zoom-gallery__close").addEventListener("click", function () {
+					// fadeOut(galleryZoom, 300, 0, body);
+					galleryZoom.style.opacity = 0;
+		
+					body.classList.remove("lock");
+					document.querySelector("html") ? document.querySelector("html").classList.remove("lock") : null;
+		
+					setTimeout(() => {
+						sliderZoom.destroy(true, true);
+						galleryZoom.remove();
+					}, 450);
+				});
+			}
+
+			// if (document.documentElement.clientWidth <= 1170) {
+			// 	let elVideo = document.querySelector(".gallery-product__video");
+			// 	let bidImage = document.querySelector(".gallery-product__item.--big");
+		
+			// 	let elWapper = element.closest(".gallery-product__item");
+		
+			// 	if (elWapper != null) {
+			// 		if (elWapper.classList.contains("--video")) {
+			// 			if (elVideo != null && bidImage != null) {
+			// 				let cloneElVideo = elVideo.cloneNode(true);
+		
+			// 				if (bidImage.querySelector(".gallery-product__video") == null) {
+			// 					bidImage.append(cloneElVideo);
+		
+			// 					cloneElVideo.play();
+		
+			// 					elWapper.classList.add("--clone");
+			// 				} else {
+			// 					bidImage.querySelector(".gallery-product__video").remove();
+		
+			// 					elWapper.classList.remove("--clone");
+			// 				}
+			// 			}
+			// 		}
+			// 		if (!elWapper.classList.contains("--video")) {
+			// 			if (bidImage != null) {
+			// 				if (bidImage.querySelector(".gallery-product__video") != null) {
+			// 					bidImage.querySelector(".gallery-product__video").remove();
+		
+			// 					document.querySelector(".gallery-product__item.--video") ? document.querySelector(".gallery-product__item.--video").classList.remove("--clone") : null;
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
+		});
 	},
 	false
 );
