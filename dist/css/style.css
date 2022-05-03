@@ -4359,12 +4359,12 @@ ul.dots-text {
   display: none;
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 0px;
   -webkit-transform: translate(0, -50%) rotate(180deg);
       -ms-transform: translate(0, -50%) rotate(180deg);
           transform: translate(0, -50%) rotate(180deg);
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 50%;
   z-index: 20; }
   .slider-gallery__next.swiper-button-disabled {
     opacity: 0.3; }
@@ -4384,12 +4384,12 @@ ul.dots-text {
   display: none;
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 0px;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 50%;
   z-index: 20; }
   .slider-gallery__prev.swiper-button-disabled {
     opacity: 0.3; }
