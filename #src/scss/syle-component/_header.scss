@@ -157,6 +157,14 @@
 
 	&__title {
 		font-size: 13px;
+		text-transform: uppercase;
+		& a {
+			color: #c41616;
+			transition: all 0.3s ease;
+			&:hover {
+				text-shadow: 0px 0px 0px #c41616, 0px 0px 0px #c41616;
+			}
+		}
 	}
 
 	&__buttons {
@@ -167,20 +175,10 @@
 	&__btn {
 		white-space: nowrap;
 		padding: 5px 10px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		font-size: 13px;
-		line-height: 140%;
-		text-transform: uppercase;
-		color: #444444;
-		transition: all 0.3s ease;
 		&:not(:last-child) {
 			margin-right: 15px;
 		}
-		&:hover {
-			border-color: #ecedef;
-			background: #ecedef;
-			color: #000;
-		}
+
 	}
 }
 

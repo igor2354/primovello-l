@@ -176,8 +176,7 @@ h6 {
 		background: #fff;
 
 		&:not(.errors):hover {
-			color: #ffffff;
-			background: #000000;
+			box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4);
 		}
 	}
 
@@ -191,9 +190,7 @@ h6 {
 		}
 	}
 	&:not(.--white):not(.--transparent):not(.errors):hover {
-		color: #000;
-		border-color: #666666;
-		background: transparent;
+		box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.4);
 	}
 
 	&.errors {
