@@ -159,10 +159,10 @@
 		font-size: 13px;
 		text-transform: uppercase;
 		& a {
-			color: #c41616;
+			color: #000;
 			transition: all 0.3s ease;
 			&:hover {
-				text-shadow: 0px 0px 0px #c41616, 0px 0px 0px #c41616;
+				text-shadow: 0px 0px 0px #000, 0px 0px 0px #000;
 			}
 		}
 	}
