@@ -1248,43 +1248,91 @@ document.addEventListener(
 					}, 450);
 				});
 			}
-
-			// if (document.documentElement.clientWidth <= 1170) {
-			// 	let elVideo = document.querySelector(".gallery-product__video");
-			// 	let bidImage = document.querySelector(".gallery-product__item.--big");
-		
-			// 	let elWapper = element.closest(".gallery-product__item");
-		
-			// 	if (elWapper != null) {
-			// 		if (elWapper.classList.contains("--video")) {
-			// 			if (elVideo != null && bidImage != null) {
-			// 				let cloneElVideo = elVideo.cloneNode(true);
-		
-			// 				if (bidImage.querySelector(".gallery-product__video") == null) {
-			// 					bidImage.append(cloneElVideo);
-		
-			// 					cloneElVideo.play();
-		
-			// 					elWapper.classList.add("--clone");
-			// 				} else {
-			// 					bidImage.querySelector(".gallery-product__video").remove();
-		
-			// 					elWapper.classList.remove("--clone");
-			// 				}
-			// 			}
-			// 		}
-			// 		if (!elWapper.classList.contains("--video")) {
-			// 			if (bidImage != null) {
-			// 				if (bidImage.querySelector(".gallery-product__video") != null) {
-			// 					bidImage.querySelector(".gallery-product__video").remove();
-		
-			// 					document.querySelector(".gallery-product__item.--video") ? document.querySelector(".gallery-product__item.--video").classList.remove("--clone") : null;
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
 		});
+
+		// Выбор языка
+		let elLocation = document.querySelector(".city-main__group");
+		let elLocationPopup = document.querySelector(".city-main__popup");
+		let elLocationBtn = document.querySelectorAll(".city-main__btn");
+
+
+		if (elLocation != null && elLocationPopup != null && elLocationBtn.length > 0) {
+			elLocationBtn.forEach(element => {
+				element.addEventListener("click", () => {
+					elLocationPopup.classList.toggle("active");
+				});
+			});
+
+			elLocation.addEventListener("click", () => {
+				elLocationPopup.classList.toggle("active");
+			});
+		}
+
+		// document.addEventListener("click", function (e) {
+		// 	let elLocationActive = document.querySelector(".city-main__popup");
+		// 	if (elLocationActive && e.target !== elLocationActive && !elLocationActive.contains(e.target) && !elLocationActive.classList.contains("active")) {
+		// 		elLocationActive.classList.remove("active");
+		// 	}
+		// });
+
+		// Сортирока поддоменов
+		let itemDomain = Array.prototype.slice.call(document.querySelectorAll(".popup-domain__item"));
+		if (itemDomain != null) {
+			itemDomain.sort(function (a, b) {
+				// сортируем от а до я
+				if (a.querySelector("a").textContent[0] < b.querySelector("a").textContent[0]) return -1;
+				if (a.querySelector("a").textContent[0] > b.querySelector("a").textContent[0]) return 1;
+				return 0;
+			});
+
+			itemDomain.forEach((el, index, array) => {
+				// берем перую букву
+				let wordFirst = el.querySelector("a").textContent[0];
+
+				// берем следующий элемент после текущего
+				let elemInsert = array[index + 1] ? array[index + 1].querySelector("a").textContent[0] : null;
+
+				// создаем обертку для буквы
+				let wordAppend = document.createElement("span");
+
+				wordAppend.classList.add("first-word");
+
+				// первому элементу сразу вставляем букву
+				if (index == 0) {
+					wordAppend.textContent = wordFirst;
+					el.prepend(wordAppend);
+				}
+
+				// проверяем отличаются ли первые буквы текущего и следующего элемента
+				if (wordFirst != elemInsert) {
+					wordAppend.textContent = elemInsert;
+
+					array[index + 1] ? array[index + 1].prepend(wordAppend) : null;
+				}
+
+				// вставляем букву слдеующему элементу за текущим
+				el.parentNode.append(el);
+			});
+
+			function moveFirstWordMobil() {
+				if (match[1].matches) {
+					itemDomain.forEach((element) => {
+						element.querySelector("span") ? element.parentNode.insertBefore(element.querySelector("span"), element) : null;
+					});
+				} else {
+					if (itemDomain[0].parentNode.querySelector(".first-word").parentNode == itemDomain[0].parentNode) {
+						let arrSpan = Array.prototype.slice.call(itemDomain[0].parentNode.querySelectorAll(".first-word"));
+
+						arrSpan.forEach((element) => {
+							element.nextSibling.append(element);
+						});
+					}
+				}
+			}
+
+			match[1].addListener(moveFirstWordMobil);
+			moveFirstWordMobil();
+		}
 	},
 	false
 );
