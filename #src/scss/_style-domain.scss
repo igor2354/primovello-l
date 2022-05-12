@@ -61,6 +61,11 @@
 		line-height: 25px;
 		& a {
 			color: #000;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+            &:hover {
+                border-color: #c41616;
+            }
 		}
 	}
 

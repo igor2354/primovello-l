@@ -7436,7 +7436,13 @@ ul.dots-text {
     font-size: 18px;
     line-height: 25px; }
     .popup-domain__active-domain a {
-      color: #000; }
+      color: #000;
+      border-bottom: 1px solid transparent;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .popup-domain__active-domain a:hover {
+        border-color: #c41616; }
   .popup-domain__list {
     max-height: 500px;
     padding-bottom: 40px;
