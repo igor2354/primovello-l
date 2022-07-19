@@ -1157,26 +1157,30 @@ document.addEventListener(
 			}
 		}
 
+		
+		let cardProductSize;
+		let cardProductSizeWrap;
+
 		document.addEventListener("click", function (e) {
 			let element = e.target,
 				body = document.body
 
 			if (element.closest(".product-card__size-icon")) {
-				let cardProductSize = element.closest(".product-card__group-size");
+				cardProductSize = element.closest(".product-card__group-size");
+				cardProductSizeWrap = cardProductSize.querySelector(".product-card__size-wrap");
 
 				if (cardProductSize != null) {
 					body.classList.add("lock");
-					cardProductSize.classList.add("active");
+					cardProductSizeWrap.classList.add("active");
+					body.append(cardProductSizeWrap);
 				}
-
 			}
 
 			if (element.closest(".product-card__size-overlay")) {
-				let cardProductSize = element.closest(".product-card__group-size");
-
 				if (cardProductSize != null) {
 					body.classList.remove("lock");
-					cardProductSize.classList.remove("active");
+					cardProductSizeWrap.classList.remove("active");
+					cardProductSize.append(cardProductSizeWrap);
 				}
 
 			}

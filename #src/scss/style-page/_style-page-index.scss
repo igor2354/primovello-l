@@ -578,14 +578,6 @@ body.device-apple {
 			bottom: 15px;
 
 			z-index: 6;
-
-			&.active {
-				z-index: 100;
-
-				& .product-card__size-wrap {
-					display: flex;
-				}
-			}
 		}
 
 		&__size-item {
@@ -614,6 +606,10 @@ body.device-apple {
 			z-index: 100;
 
 			display: none;
+
+			&.active {
+				display: flex;
+			}
 		}
 
 		&__size-overlay {
@@ -649,14 +645,6 @@ body.device-apple {
 			bottom: 15px;
 
 			z-index: 6;
-
-			&.active {
-				z-index: 100;
-
-				& .product-card__size-wrap {
-					display: flex;
-				}
-			}
 		}
 
 		&__size-item {
@@ -685,6 +673,10 @@ body.device-apple {
 			z-index: 100;
 
 			display: none;
+
+			&.active {
+				display: flex;
+			}
 		}
 
 		&__size-overlay {
