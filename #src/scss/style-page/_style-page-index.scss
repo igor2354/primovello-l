@@ -480,7 +480,7 @@
 	}
 
 	&__size-text {
-		font-size: 13px;
+		font-size: 15px;
 		line-height: 120%;
 		text-transform: uppercase;
 		text-align: center;
@@ -493,10 +493,17 @@
 	}
 
 	&__size-item {
-		padding: 5px 15px;
-		font-size: 13px;
+		margin: 0 5px 10px 5px;
+		font-size: 15px;
 		line-height: 120%;
+		padding: 8px 8px 8px 8px;
+		border: 1px solid rgba(0, 0, 0, 0.4);
 		color: #000;
+	}
+
+	&__size-icon svg {
+		width: 22px;
+		height: 22px;
 	}
 
 	&__name {
@@ -518,12 +525,11 @@
 }
 
 
-
 @media (min-width: 1170px) {
 	body:not(.device-apple) {
 		& .product-card {
 			&__group-size {
-				padding: 15px 10px 20px 10px;
+				padding: 15px 10px 10px 10px;
 	
 				transition: all 0.3s ease;
 		
@@ -546,7 +552,8 @@
 				background: transparent;
 				transition: all 0.3s ease;
 				&:hover {
-					background: #ededeb;
+					background: #000;
+					color: #fff;
 				}
 			}
 	
@@ -577,18 +584,21 @@ body.device-apple {
 			right: 15px;
 			bottom: 15px;
 
+			z-index: 10;
+		}
+
+		&__size-icon {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 
 			width: 40px;
 			height: 40px;
-
-			z-index: 10;
 		}
 
 		&__size-item {
 			padding: 10px;
+			border: none;
 			border-bottom: 1px solid #ededeb;
 		}
 
@@ -654,8 +664,18 @@ body.device-apple {
 			z-index: 10;
 		}
 
+		&__size-icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 40px;
+			height: 40px;
+		}
+
 		&__size-item {
 			padding: 10px;
+			border: none;
 			border-bottom: 1px solid #ededeb;
 		}
 

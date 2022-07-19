@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="./css/lightgallery-bundle.min.css" />
+		<link rel="stylesheet" href="./css/lg-thumbnail.css" />
+		<link rel="stylesheet" href="./css/lg-fullscreen.css" />
+		<link rel="stylesheet" href="./css/lg-transitions.css" />
+		<link rel="stylesheet" href="./css/nouislider.min.css" />
+		<link rel="stylesheet" href="./css/OverlayScrollbars.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Document</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./css/lightgallery-bundle.min.css">
-  <link rel="stylesheet" href="./css/lg-thumbnail.css">
-  <link rel="stylesheet" href="./css/lg-fullscreen.css">
-  <link rel="stylesheet" href="./css/lg-transitions.css">
-  <link rel="stylesheet" href="./css/nouislider.min.css">
-  <link rel="stylesheet" href="./css/OverlayScrollbars.min.css">
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Document</title>
-</head>
+	<body>
+		<div class="wrapper">
+			<div class="stocks">
+				<div class="stocks__close"></div>
+				<div class="stocks__text">Рапродажа 30% на дубленки осень - зима 2021</div>
+			</div>
 
-<body>
+			<!-- HEADER -->
 
-  <div class="wrapper">
+			<header class="header">
+				<div class="container">
+					<div class="header__wrap">
+						<div class="header__row">
+							<div class="header__column">
+								<div class="header__burger">
+									<span></span>
+								</div>
+								<div class="header__logo logo">
+									<a href="#">
+										<img src="./img/logo.svg" alt="" />
+									</a>
+								</div>
 
-    <div class="stocks">
-      <div class="stocks__close"></div>
-      <div class="stocks__text">Рапродажа 30% на дубленки осень - зима 2021</div>
-    </div>
-
-    <!-- HEADER -->
-
-    <header class="header">
-
-      <div class="container">
-
-        <div class="header__wrap">
-          <div class="header__row">
-            <div class="header__column">
-              <div class="header__burger">
-                <span></span>
-              </div>
-              <div class="header__logo logo">
-                <a href="#">
-                  <img src="./img/logo.svg" alt="">
-                </a>
-              </div>
-
-              <nav class="main-nav">
+								<nav class="main-nav">
     <ul class="main-nav__list">
 
         <li class="main-nav__item hover-item" data-id-sub-menu="her">
@@ -71,608 +66,1045 @@
 
     </ul>
 </nav>
-            </div>
-
-            <div class="header__column">
-              <div class="header__city city-main">
-                <div class="city-main__group">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.208.667c3.79 0 6.875 3.107 6.875 6.927 0 4.696-5.38 9.323-6.875 9.323S.333 12.29.333 7.594c0-3.82 3.084-6.927 6.875-6.927zm0 1.25c-3.102 0-5.625 2.547-5.625 5.677 0 3.983 4.687 7.863 5.625 8.07.938-.208 5.625-4.088 5.625-8.07 0-3.13-2.523-5.677-5.625-5.677zm0 2.916a2.712 2.712 0 012.71 2.71 2.71 2.71 0 01-4.623 1.913A2.71 2.71 0 014.5 7.543a2.712 2.712 0 012.708-2.71h-.001zm0 1.25a1.46 1.46 0 10-.006 2.92 1.46 1.46 0 00.007-2.92h-.001z" fill="#000"/></svg>
-                  <div class="city-main__name">Москва</div>
-                </div>
-
-                <div class="city-main__popup">
-                  <div class="city-main__group-title">
-                    <div class="city-main__title">Ваш город <a href="#">Москва?</a></div>
-                  </div>
-
-                  <div class="city-main__buttons">
-                    <a href="#" class="city-main__btn btn-var-two">Да</a>
-                    <a href="#" class="city-main__btn js-modal-show btn-var-two --white" data-popup="popup-domain">Выбрать другой город</a>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="header__lang lang-main">
-                <span class="lang-main__current">ru</span>
-
-                <ul class="lang-main__list">
-                  <li class="lang-main__item current"><a href="#">RU</a></li>
-                  <li class="lang-main__item"><a href="#">ENG</a></li>
-                </ul>
-              </div>
-
-              <div class="header__search search-main">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z"
-                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                  <path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="bevel" />
-                </svg>
-                <span class="search-main__sign">Поиск</span>
-              </div>
-
-              <div class="header__login login-main">
-                <a href="#" class="login-main__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2 14.6667L2.52667 12.7467C4.26667 6.41333 11.7333 6.41333 13.4733 12.7467L14 14.6667"
-                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                      d="M7.99996 7.98667C9.84091 7.98667 11.3333 6.49428 11.3333 4.65333C11.3333 2.81238 9.84091 1.32 7.99996 1.32C6.15901 1.32 4.66663 2.81238 4.66663 4.65333C4.66663 6.49428 6.15901 7.98667 7.99996 7.98667Z"
-                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                  </svg>
-                </a>
-              </div>
-
-              <div class="header__fav fav-main">
-                <a href="#" class="fav-main__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z"
-                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <span class="fav-main__value">5</span>
-                </a>
-              </div>
-
-              <div class="header__cart cart-main">
-                <a href="javascript:void(0);" class="cart-main__link js-show-cart">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path
-                      d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z"
-                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                      d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25"
-                      stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <span class="cart-main__value">2</span>
-                </a>
-
-                <div class="cart-main__popup popup-cart-main js-show-cart-basket">
-                  <div class="popup-cart-main__body">
-                    <div class="popup-cart-main__group-top">
-                      <div class="popup-cart-main__close js-close-cart-basket"></div>
-                      <div class="popup-cart-main__title">Моя корзина <span>(5 шт)</span></div>
-                    </div>
-
-                    <div class="popup-cart-main__group-middle">
-                      <div class="popup-cart-main__list">
-                        <div class="popup-cart-main__item card-basket-item">
-                          <div class="card-basket-item__image">
-                            <img src="./img/image-card-product-basket.png" alt="">
-                          </div>
-
-                          <div class="card-basket-item__group">
-
-                            <div class="card-basket-item__group-top">
-
-                              <div class="card-basket-item__group-name">
-                                <div class="card-basket-item__name">дубленка с мехом</div>
-                              </div>
-
-                              <div class="card-basket-item__controls">
-
-                                <div class="card-basket-item__delete">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z"
-                                      fill="#C41616" />
-                                  </svg>
-                                </div>
-                              </div>
-
-                            </div>
-
-
-                            <div class="card-basket-item__group-middle">
-                              <div class="card-basket-item__price">
-                                <span class="card-basket-item__price-old">600 000 руб.</span>
-                                <span class="card-basket-item__price-current">450 000
-                                  руб.</span>
-                              </div>
-
-                              <div class="card-basket-item__list-option">
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Цвет:</span>
-                                  <span class="card-basket-item__option-value">Бежевый</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">размер:</span>
-                                  <span class="card-basket-item__option-value">44</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Кол-во:</span>
-                                  <span class="card-basket-item__option-value">2</span>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-
-                        <div class="popup-cart-main__item card-basket-item">
-                          <div class="card-basket-item__image">
-                            <img src="./img/image-card-product-basket.png" alt="">
-                          </div>
-
-                          <div class="card-basket-item__group">
-
-                            <div class="card-basket-item__group-top">
-
-                              <div class="card-basket-item__group-name">
-                                <div class="card-basket-item__name">дубленка с мехом</div>
-                              </div>
-
-                              <div class="card-basket-item__controls">
-
-                                <div class="card-basket-item__delete">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z"
-                                      fill="#C41616" />
-                                  </svg>
-                                </div>
-                              </div>
-
-                            </div>
-
-
-                            <div class="card-basket-item__group-middle">
-                              <div class="card-basket-item__price">
-                                <span class="card-basket-item__price-current">450 000
-                                  руб.</span>
-                              </div>
-
-                              <div class="card-basket-item__list-option">
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Цвет:</span>
-                                  <span class="card-basket-item__option-value">Бежевый</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">размер:</span>
-                                  <span class="card-basket-item__option-value">44</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Кол-во:</span>
-                                  <span class="card-basket-item__option-value">2</span>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-
-                        <div class="popup-cart-main__item card-basket-item">
-                          <div class="card-basket-item__image">
-                            <img src="./img/image-card-product-basket.png" alt="">
-                          </div>
-
-                          <div class="card-basket-item__group">
-
-                            <div class="card-basket-item__group-top">
-
-                              <div class="card-basket-item__group-name">
-                                <div class="card-basket-item__name">дубленка с мехом</div>
-                              </div>
-
-                              <div class="card-basket-item__controls">
-
-                                <div class="card-basket-item__delete">
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17"
-                                    fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z"
-                                      fill="#C41616" />
-                                  </svg>
-                                </div>
-                              </div>
-
-                            </div>
-
-
-                            <div class="card-basket-item__group-middle">
-                              <div class="card-basket-item__price">
-                                <span class="card-basket-item__price-old">600 000 руб.</span>
-                                <span class="card-basket-item__price-current">450 000
-                                  руб.</span>
-                              </div>
-
-                              <div class="card-basket-item__list-option">
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Цвет:</span>
-                                  <span class="card-basket-item__option-value">Бежевый</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">размер:</span>
-                                  <span class="card-basket-item__option-value">44</span>
-                                </div>
-
-                                <div class="card-basket-item__option">
-                                  <span class="card-basket-item__option-name">Кол-во:</span>
-                                  <span class="card-basket-item__option-value">2</span>
-                                </div>
-                              </div>
-                            </div>
-
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="popup-cart-main__group-bottom">
-                      <div class="popup-cart-main__result">
-                        <span class="popup-cart-main__name">Итого к оплате</span>
-                        <span class="popup-cart-main__value">1 103 200 руб.</span>
-                      </div>
-
-                      <a href="#" class="popup-cart-main__button btn-var-two">Перейти в корзину</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="header__search-panel search-panel">
-        <div class="container">
-          <form action="#" class="search-panel__form">
-            <div class="search-panel__wrap">
-              <button type="submit" class="search-panel__button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
-                  <path
-                    d="M8.34241 11.8623C11.2419 11.8623 13.5924 9.5118 13.5924 6.6123C13.5924 3.71281 11.2419 1.3623 8.34241 1.3623C5.44291 1.3623 3.09241 3.71281 3.09241 6.6123C3.09241 9.5118 5.44291 11.8623 8.34241 11.8623Z"
-                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
-                  <path d="M4.68246 10.3774L1.02246 14.0374" stroke="black" stroke-width="1.5" stroke-linecap="round"
-                    stroke-linejoin="bevel" />
-                </svg>
-              </button>
-              <input type="text" placeholder="Поиск">
-              <div class="search-panel__close"></div>
-            </div>
-          </form>
-
-          <div class="search-panel__result">
-            <div class="search-panel__result-list">
-              <a href="#" class="search-panel__result-item">
-                <span>Кожаная куртка с капюшоном</span>
-              </a>
-
-              <a href="#" class="search-panel__result-item">
-                <span>Кожаная дубленка с застежками</span>
-              </a>
-              <a href="#" class="search-panel__result-item">
-                <span>Кожаная юбка</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="header__menu menu-header">
-        <div class="container">
-
-          <div class="menu-header__group">
-            <div class="menu-header__name">Меню</div>
-
-            <div class="menu-header__close close-mobile-menu"></div>
-          </div>
-
-          <div class="menu-header__wrap">
-
-            <nav class="menu-header__sub sub-nav">
-
-              <div class="sub-nav__item --column-size-one  sub-menu" id="her">
-                <div class="sub-nav__row">
-                  <div class="sub-nav__column">
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">верхняя одежда</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">одежда</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
-                      </ul>
-                    </div>
-
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">Аксессуары</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
-                      </ul>
-                    </div>
-
-
-
-
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">Коллекции</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
-                      </ul>
-
-                      <a href="#" class="menu-sub-nav__title">Новинки</a>
-
-                      <a href="#" class="menu-sub-nav__title --sale">Sale</a>
-                    </div>
-
-                  </div>
-
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__card card-sub-nav">
-                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt=""></div>
-                      <div class="card-sub-nav__name">Кожаные пиджаки</div>
-                      <div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков,
-                        для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
-                      <a href="#" class="card-sub-nav__link">Перейти</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="sub-menu__popular sub-menu-popular">
-                  <div class="sub-menu-popular__name">Популярное:</div>
-
-                  <ul class="sub-menu-popular__list">
-                    <li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">топы</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">косухи</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">шубы</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="sub-nav__item --column-size-one  sub-menu" id="him">
-                <div class="sub-nav__row">
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">верхняя одежда</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">одежда</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">Аксессуары</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <a href="#" class="menu-sub-nav__title">Коллекции</a>
-
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
-                      </ul>
-
-                      <a href="#" class="menu-sub-nav__title">Новинки</a>
-
-                      <a href="#" class="menu-sub-nav__title --sale">Sale</a>
-                    </div>
-
-                  </div>
-
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__card card-sub-nav">
-                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt=""></div>
-                      <div class="card-sub-nav__name">Кожаные пиджаки</div>
-                      <div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков,
-                        для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
-                      <a href="#" class="card-sub-nav__link">Перейти</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="sub-menu__popular sub-menu-popular">
-                  <div class="sub-menu-popular__name">Популярное:</div>
-
-                  <ul class="sub-menu-popular__list">
-                    <li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">топы</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">косухи</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">шубы</a></li>
-                    <li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="sub-nav__item --column-size-two  sub-menu" id="sale">
-                <div class="sub-nav__row">
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__card card-sub-nav">
-                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-1.png" alt=""></div>
-                      <div class="card-sub-nav__name">Для женщин</div>
-                      <div class="card-sub-nav__text">Новые коллекции кожаных тренчей со скидкой до 30%</div>
-                      <a href="#" class="card-sub-nav__link">Перейти</a>
-                    </div>
-                  </div>
-
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__card card-sub-nav">
-                      <div class="card-sub-nav__image"><img src="./img/menu-card-image-2.png" alt=""></div>
-                      <div class="card-sub-nav__name">Для мужчин</div>
-                      <div class="card-sub-nav__text">Распродажа кожаных пиджаков, для любой погоды</div>
-                      <a href="#" class="card-sub-nav__link">Перейти</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sub-nav__item --column-size-three  sub-menu" id="factory">
-                <div class="sub-nav__row">
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Оптовикам</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Вакансии</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Контакты</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="sub-nav__column">
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-4.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">Магазин</div>
-                    </a>
-
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-5.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">О фабрике</div>
-                    </a>
-
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-6.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">Наша история</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sub-nav__item --column-size-three   sub-menu" id="buyers">
-                <div class="sub-nav__row">
-                  <div class="sub-nav__column">
-                    <div class="sub-nav__menu menu-sub-nav">
-                      <ul class="menu-sub-nav__list">
-                        <li class="menu-sub-nav__item"><a href="#">Доставка</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Оплата и рассрочка</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Обмен и возврат</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Гарантии</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Кожа и обработка</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Руководство по уходу</a></li>
-                        <li class="menu-sub-nav__item"><a href="#">Частые вопросы</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="sub-nav__column">
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-1.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">Индивидуальный пошив</div>
-                    </a>
-
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-2.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">руководство по размерам</div>
-                    </a>
-
-                    <a href="#" class="sub-nav__card-category sub-nav-card-category">
-                      <div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-3.png"
-                          alt="">
-                      </div>
-                      <div class="sub-nav-card-category__name">Экологичность</div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </nav>
-
-          </div>
-
-        </div>
-      </div>
-
-    </header>
-
-    <!-- // HEADER -->
+							</div>
+
+							<div class="header__column">
+								<div class="header__city city-main">
+									<div class="city-main__group">
+										<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.208.667c3.79 0 6.875 3.107 6.875 6.927 0 4.696-5.38 9.323-6.875 9.323S.333 12.29.333 7.594c0-3.82 3.084-6.927 6.875-6.927zm0 1.25c-3.102 0-5.625 2.547-5.625 5.677 0 3.983 4.687 7.863 5.625 8.07.938-.208 5.625-4.088 5.625-8.07 0-3.13-2.523-5.677-5.625-5.677zm0 2.916a2.712 2.712 0 012.71 2.71 2.71 2.71 0 01-4.623 1.913A2.71 2.71 0 014.5 7.543a2.712 2.712 0 012.708-2.71h-.001zm0 1.25a1.46 1.46 0 10-.006 2.92 1.46 1.46 0 00.007-2.92h-.001z" fill="#000" /></svg>
+										<div class="city-main__name">Москва</div>
+									</div>
+
+									<div class="city-main__popup">
+										<div class="city-main__group-title">
+											<div class="city-main__title">Ваш город <a href="#">Москва?</a></div>
+										</div>
+
+										<div class="city-main__buttons">
+											<a href="#" class="city-main__btn btn-var-two">Да</a>
+											<a href="#" class="city-main__btn js-modal-show btn-var-two --white" data-popup="popup-domain">Выбрать другой город</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="header__lang lang-main">
+									<span class="lang-main__current">ru</span>
+
+									<ul class="lang-main__list">
+										<li class="lang-main__item current"><a href="#">RU</a></li>
+										<li class="lang-main__item"><a href="#">ENG</a></li>
+									</ul>
+								</div>
+
+								<div class="header__search search-main">
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+										<path d="M8.34241 11.8625C11.2419 11.8625 13.5924 9.512 13.5924 6.6125C13.5924 3.71301 11.2419 1.3625 8.34241 1.3625C5.44291 1.3625 3.09241 3.71301 3.09241 6.6125C3.09241 9.512 5.44291 11.8625 8.34241 11.8625Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+										<path d="M4.68246 10.3775L1.02246 14.0375" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+									</svg>
+									<span class="search-main__sign">Поиск</span>
+								</div>
+
+								<div class="header__login login-main">
+									<a href="#" class="login-main__link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+											<path d="M2 14.6667L2.52667 12.7467C4.26667 6.41333 11.7333 6.41333 13.4733 12.7467L14 14.6667" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M7.99996 7.98667C9.84091 7.98667 11.3333 6.49428 11.3333 4.65333C11.3333 2.81238 9.84091 1.32 7.99996 1.32C6.15901 1.32 4.66663 2.81238 4.66663 4.65333C4.66663 6.49428 6.15901 7.98667 7.99996 7.98667Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+										</svg>
+									</a>
+								</div>
+
+								<div class="header__fav fav-main">
+									<a href="#" class="fav-main__link">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<span class="fav-main__value">5</span>
+									</a>
+								</div>
+
+								<div class="header__cart cart-main">
+									<a href="javascript:void(0);" class="cart-main__link js-show-cart">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+											<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<span class="cart-main__value">2</span>
+									</a>
+
+									<div class="cart-main__popup popup-cart-main js-show-cart-basket">
+										<div class="popup-cart-main__body">
+											<div class="popup-cart-main__group-top">
+												<div class="popup-cart-main__close js-close-cart-basket"></div>
+												<div class="popup-cart-main__title">Моя корзина <span>(5 шт)</span></div>
+											</div>
+
+											<div class="popup-cart-main__group-middle">
+												<div class="popup-cart-main__list">
+													<div class="popup-cart-main__item card-basket-item">
+														<div class="card-basket-item__image">
+															<img src="./img/image-card-product-basket.png" alt="" />
+														</div>
+
+														<div class="card-basket-item__group">
+															<div class="card-basket-item__group-top">
+																<div class="card-basket-item__group-name">
+																	<div class="card-basket-item__name">дубленка с мехом</div>
+																</div>
+
+																<div class="card-basket-item__controls">
+																	<div class="card-basket-item__delete">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+																			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z" fill="#C41616" />
+																		</svg>
+																	</div>
+																</div>
+															</div>
+
+															<div class="card-basket-item__group-middle">
+																<div class="card-basket-item__price">
+																	<span class="card-basket-item__price-old">600 000 руб.</span>
+																	<span class="card-basket-item__price-current">450 000 руб.</span>
+																</div>
+
+																<div class="card-basket-item__list-option">
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Цвет:</span>
+																		<span class="card-basket-item__option-value">Бежевый</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">размер:</span>
+																		<span class="card-basket-item__option-value">44</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Кол-во:</span>
+																		<span class="card-basket-item__option-value">2</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="popup-cart-main__item card-basket-item">
+														<div class="card-basket-item__image">
+															<img src="./img/image-card-product-basket.png" alt="" />
+														</div>
+
+														<div class="card-basket-item__group">
+															<div class="card-basket-item__group-top">
+																<div class="card-basket-item__group-name">
+																	<div class="card-basket-item__name">дубленка с мехом</div>
+																</div>
+
+																<div class="card-basket-item__controls">
+																	<div class="card-basket-item__delete">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+																			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z" fill="#C41616" />
+																		</svg>
+																	</div>
+																</div>
+															</div>
+
+															<div class="card-basket-item__group-middle">
+																<div class="card-basket-item__price">
+																	<span class="card-basket-item__price-current">450 000 руб.</span>
+																</div>
+
+																<div class="card-basket-item__list-option">
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Цвет:</span>
+																		<span class="card-basket-item__option-value">Бежевый</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">размер:</span>
+																		<span class="card-basket-item__option-value">44</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Кол-во:</span>
+																		<span class="card-basket-item__option-value">2</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<div class="popup-cart-main__item card-basket-item">
+														<div class="card-basket-item__image">
+															<img src="./img/image-card-product-basket.png" alt="" />
+														</div>
+
+														<div class="card-basket-item__group">
+															<div class="card-basket-item__group-top">
+																<div class="card-basket-item__group-name">
+																	<div class="card-basket-item__name">дубленка с мехом</div>
+																</div>
+
+																<div class="card-basket-item__controls">
+																	<div class="card-basket-item__delete">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="15" height="17" viewBox="0 0 15 17" fill="none">
+																			<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3461 5.90332C13.6731 5.93024 13.9169 6.21603 13.8908 6.54299C13.8861 6.59682 13.457 11.9097 13.21 14.1382C13.0564 15.5213 12.1428 16.3628 10.7637 16.3882C9.70843 16.4064 8.69035 16.4167 7.69522 16.4167C6.62252 16.4167 5.57672 16.4048 4.54202 16.3834C3.21835 16.3573 2.30239 15.4991 2.15277 14.1438C1.90339 11.8954 1.47668 6.59603 1.47272 6.54299C1.44581 6.21603 1.68964 5.92944 2.0166 5.90332C2.33881 5.89461 2.63014 6.12103 2.65627 6.44719C2.65879 6.48156 2.83324 8.64568 3.02333 10.7869L3.06151 11.2142C3.15726 12.2785 3.25431 13.3012 3.33314 14.0132C3.41785 14.7834 3.83347 15.1809 4.56656 15.1959C6.54572 15.2379 8.56527 15.2402 10.7423 15.2007C11.5213 15.1856 11.9425 14.7961 12.0296 14.0076C12.275 11.7957 12.7025 6.50103 12.7073 6.44719C12.7334 6.12103 13.0223 5.89303 13.3461 5.90332ZM9.35677 0.583557C10.0835 0.583557 10.7224 1.0736 10.91 1.77581L11.1111 2.7741C11.1761 3.10135 11.4633 3.34034 11.7958 3.34559L14.3938 3.34568C14.7216 3.34568 14.9876 3.61168 14.9876 3.93943C14.9876 4.26718 14.7216 4.53318 14.3938 4.53318L11.819 4.53306C11.815 4.53314 11.811 4.53318 11.807 4.53318L11.7877 4.53239L3.57461 4.53309C3.56823 4.53315 3.56184 4.53318 3.55544 4.53318L3.54325 4.53239L0.96875 4.53318C0.641 4.53318 0.375 4.26718 0.375 3.93943C0.375 3.61168 0.641 3.34568 0.96875 3.34568L3.56621 3.34489L3.64618 3.33983C3.94408 3.30118 4.19165 3.07493 4.25211 2.7741L4.44448 1.81143C4.64002 1.0736 5.2789 0.583557 6.00565 0.583557H9.35677ZM9.35677 1.77106H6.00565C5.81565 1.77106 5.64861 1.89852 5.60032 2.08139L5.41586 3.00764C5.39241 3.12496 5.35828 3.23803 5.31459 3.34589H10.0481C10.0043 3.23803 9.97011 3.12496 9.94657 3.00764L9.75419 2.04497C9.71382 1.89852 9.54677 1.77106 9.35677 1.77106Z" fill="#C41616" />
+																		</svg>
+																	</div>
+																</div>
+															</div>
+
+															<div class="card-basket-item__group-middle">
+																<div class="card-basket-item__price">
+																	<span class="card-basket-item__price-old">600 000 руб.</span>
+																	<span class="card-basket-item__price-current">450 000 руб.</span>
+																</div>
+
+																<div class="card-basket-item__list-option">
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Цвет:</span>
+																		<span class="card-basket-item__option-value">Бежевый</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">размер:</span>
+																		<span class="card-basket-item__option-value">44</span>
+																	</div>
+
+																	<div class="card-basket-item__option">
+																		<span class="card-basket-item__option-name">Кол-во:</span>
+																		<span class="card-basket-item__option-value">2</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="popup-cart-main__group-bottom">
+												<div class="popup-cart-main__result">
+													<span class="popup-cart-main__name">Итого к оплате</span>
+													<span class="popup-cart-main__value">1 103 200 руб.</span>
+												</div>
+
+												<a href="#" class="popup-cart-main__button btn-var-two">Перейти в корзину</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header__search-panel search-panel">
+					<div class="container">
+						<form action="#" class="search-panel__form">
+							<div class="search-panel__wrap">
+								<button type="submit" class="search-panel__button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+										<path d="M8.34241 11.8623C11.2419 11.8623 13.5924 9.5118 13.5924 6.6123C13.5924 3.71281 11.2419 1.3623 8.34241 1.3623C5.44291 1.3623 3.09241 3.71281 3.09241 6.6123C3.09241 9.5118 5.44291 11.8623 8.34241 11.8623Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+										<path d="M4.68246 10.3774L1.02246 14.0374" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="bevel" />
+									</svg>
+								</button>
+								<input type="text" placeholder="Поиск" />
+								<div class="search-panel__close"></div>
+							</div>
+						</form>
+
+						<div class="search-panel__result search-result">
+							<div class="search-result__row">
+								<div class="search-result__column">
+									<div class="search-result__title">Поиск по категории</div>
+
+									<div class="search-result__list-category">
+										<div class="search-result__item-category"><span>Кожаные куртки</span> </div>
+
+										<div class="search-result__item-category"><span>Кожаные пуховики</span></div>
+
+										<div class="search-result__item-category"><span>Кожаные пиджаки</span></div>
+
+										<div class="search-result__item-category"><span>Дубленки</span></div>
+
+										<div class="search-result__item-category"><span>Кожаные пальто</span></div>
+
+										<div class="search-result__item-category"><span>Кожаные плащи</span></div>
+									</div>
+								</div>
+
+								<div class="search-result__column">
+									<div class="search-result__list">
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --sale">
+														<img class="banner__icon" src="./img/icon-sale.svg" alt="" />
+														<span class="banner__text">хит</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-1.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-2.png" alt="" />
+												</div>
+
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">48</div>
+																<div class="product-card__size-item">50</div>
+																<div class="product-card__size-item">52</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">Дубленка утепленная</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">75 000 руб.</div>
+												<span class="price-card__current">68 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --hit">
+														<img class="banner__icon" src="./img/icon-hit.svg" alt="" />
+														<span class="banner__text">sale</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-2.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-3.png" alt="" />
+												</div>
+
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">48</div>
+																<div class="product-card__size-item">50</div>
+																<div class="product-card__size-item">52</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">ЖЕНСКИЙ ГОЛОВНОЙ УБОР ИЗ МЕХА ЛИСЫ И НОРКИ</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">65 000 руб.</div>
+												<span class="price-card__current">54 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+												<li class="option-card__item" style="background: #865a22"></li>
+												<li class="option-card__item" style="background: #0c7e56"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-3.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-1.png" alt="" />
+												</div>
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">куртка из кожи</div>
+
+											<div class="product-card__price price-card">
+												<span class="price-card__current">258 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --sale">
+														<img class="banner__icon" src="./img/icon-sale.svg" alt="" />
+														<span class="banner__text">хит</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-4.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-1.png" alt="" />
+												</div>
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">Дубленка утепленная</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">75 000 руб.</div>
+												<span class="price-card__current">68 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --sale">
+														<img class="banner__icon" src="./img/icon-sale.svg" alt="" />
+														<span class="banner__text">хит</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-1.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-2.png" alt="" />
+												</div>
+
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">48</div>
+																<div class="product-card__size-item">50</div>
+																<div class="product-card__size-item">52</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">Дубленка утепленная</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">75 000 руб.</div>
+												<span class="price-card__current">68 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --hit">
+														<img class="banner__icon" src="./img/icon-hit.svg" alt="" />
+														<span class="banner__text">sale</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-2.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-3.png" alt="" />
+												</div>
+
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">48</div>
+																<div class="product-card__size-item">50</div>
+																<div class="product-card__size-item">52</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">ЖЕНСКИЙ ГОЛОВНОЙ УБОР ИЗ МЕХА ЛИСЫ И НОРКИ</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">65 000 руб.</div>
+												<span class="price-card__current">54 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+												<li class="option-card__item" style="background: #865a22"></li>
+												<li class="option-card__item" style="background: #0c7e56"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-3.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-1.png" alt="" />
+												</div>
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">46</div>
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">куртка из кожи</div>
+
+											<div class="product-card__price price-card">
+												<span class="price-card__current">258 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+
+										<div class="search-result__item product-card">
+											<div class="product-card__group js-hover-image">
+												<a class="product-card__link" href="#"></a>
+
+												<div class="product-card__fav fav">
+													<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M9.98252 3.66749C10.6986 2.95141 11.6698 2.54912 12.6825 2.54912C13.6952 2.54912 14.6664 2.95141 15.3825 3.66749C16.0986 4.38358 16.5009 5.3548 16.5009 6.36749C16.5009 7.38019 16.0986 8.35141 15.3825 9.06749L14.4 10.05L9.00002 15.45L3.60002 10.05L2.61752 9.06749C1.90144 8.35141 1.49915 7.38019 1.49915 6.36749C1.49915 5.3548 1.90144 4.38358 2.61752 3.66749C3.33361 2.95141 4.30483 2.54912 5.31752 2.54912C6.33022 2.54912 7.30144 2.95141 8.01752 3.66749L9.00002 4.64999L9.98252 3.66749Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="product-card__banner banner">
+													<div class="banner__item --new">
+														<img class="banner__icon" src="./img/icon-new.svg" alt="" />
+														<span class="banner__text">New</span>
+													</div>
+
+													<div class="banner__item --sale">
+														<img class="banner__icon" src="./img/icon-sale.svg" alt="" />
+														<span class="banner__text">хит</span>
+													</div>
+												</div>
+												<div class="product-card__image">
+													<img class="js-first-image" src="./img/page-catalog-image-4.png" alt="" />
+													<img class="js-second-image" src="./img/page-catalog-image-1.png" alt="" />
+												</div>
+												<div class="product-card__group-size">
+													<div class="product-card__size-icon">
+														<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+															<path d="M14.6026 15.75H3.39756C3.17165 15.7493 2.94881 15.6975 2.7457 15.5986C2.54258 15.4997 2.36442 15.3562 2.22453 15.1789C2.08464 15.0015 1.98662 14.7948 1.93779 14.5742C1.88897 14.3536 1.8906 14.1249 1.94256 13.905L3.75006 6.405C3.82664 6.08072 4.00901 5.79117 4.2684 5.58203C4.52778 5.3729 4.84942 5.25607 5.18256 5.25H12.8176C13.1507 5.25607 13.4723 5.3729 13.7317 5.58203C13.9911 5.79117 14.1735 6.08072 14.2501 6.405L16.0351 13.905C16.0866 14.123 16.0887 14.3498 16.0411 14.5688C15.9935 14.7877 15.8975 14.9932 15.7601 15.1702C15.6227 15.3471 15.4474 15.4911 15.2471 15.5914C15.0468 15.6917 14.8266 15.7459 14.6026 15.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+															<path d="M5.67004 5.25L6.34504 3.885C6.59524 3.39532 6.97521 2.98382 7.44344 2.69548C7.91168 2.40713 8.45016 2.25302 9.00004 2.25V2.25C9.54993 2.25302 10.0884 2.40713 10.5566 2.69548C11.0249 2.98382 11.4048 3.39532 11.655 3.885L12.33 5.25" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+														</svg>
+													</div>
+
+													<div class="product-card__size-wrap">
+														<div class="product-card__size-overlay"></div>
+
+														<div class="product-card__size-body">
+															<div class="product-card__size-text">Добавить в корзину</div>
+
+															<div class="product-card__size-list">
+																<div class="product-card__size-item">54</div>
+																<div class="product-card__size-item">56</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="product-card__name">Дубленка утепленная</div>
+
+											<div class="product-card__price price-card">
+												<div class="price-card__old">75 000 руб.</div>
+												<span class="price-card__current">68 000 руб.</span>
+											</div>
+
+											<ul class="product-card__colors option-card">
+												<li class="option-card__item" style="background: #5f5638"></li>
+												<li class="option-card__item" style="background: #d8bb9d"></li>
+												<li class="option-card__item" style="background: #171819"></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="header__menu menu-header">
+					<div class="container">
+						<div class="menu-header__group">
+							<div class="menu-header__name">Меню</div>
+
+							<div class="menu-header__close close-mobile-menu"></div>
+						</div>
+
+						<div class="menu-header__wrap">
+							<nav class="menu-header__sub sub-nav">
+								<div class="sub-nav__item --column-size-one sub-menu" id="her">
+									<div class="sub-nav__row">
+										<div class="sub-nav__column">
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">верхняя одежда</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">одежда</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">Аксессуары</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">Коллекции</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
+												</ul>
+
+												<a href="#" class="menu-sub-nav__title">Новинки</a>
+
+												<a href="#" class="menu-sub-nav__title --sale">Sale</a>
+											</div>
+										</div>
+
+										<div class="sub-nav__column">
+											<div class="sub-nav__card card-sub-nav">
+												<div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt="" /></div>
+												<div class="card-sub-nav__name">Кожаные пиджаки</div>
+												<div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков, для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
+												<a href="#" class="card-sub-nav__link">Перейти</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="sub-menu__popular sub-menu-popular">
+										<div class="sub-menu-popular__name">Популярное:</div>
+
+										<ul class="sub-menu-popular__list">
+											<li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
+											<li class="sub-menu-popular__item"><a href="#">топы</a></li>
+											<li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
+											<li class="sub-menu-popular__item"><a href="#">косухи</a></li>
+											<li class="sub-menu-popular__item"><a href="#">шубы</a></li>
+											<li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sub-nav__item --column-size-one sub-menu" id="him">
+									<div class="sub-nav__row">
+										<div class="sub-nav__column">
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">верхняя одежда</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Дубленки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные куртки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пальто</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пиджаки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные плащи и тренчи</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные пуховики</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Шубы</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">одежда</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Блузки и рубашки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные брюки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные рубашки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Футболки и топы</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные шорты</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожаные юбки</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">Аксессуары</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Головные уборы</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кошельки и обложки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Меховые рукавички</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Перчатки</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Платки и шарфы</a></li>
+												</ul>
+											</div>
+
+											<div class="sub-nav__menu menu-sub-nav">
+												<a href="#" class="menu-sub-nav__title">Коллекции</a>
+
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Весна - Лето 2021</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Осень - Зима 2021</a></li>
+												</ul>
+
+												<a href="#" class="menu-sub-nav__title">Новинки</a>
+
+												<a href="#" class="menu-sub-nav__title --sale">Sale</a>
+											</div>
+										</div>
+
+										<div class="sub-nav__column">
+											<div class="sub-nav__card card-sub-nav">
+												<div class="card-sub-nav__image"><img src="./img/menu-card-image-3.png" alt="" /></div>
+												<div class="card-sub-nav__name">Кожаные пиджаки</div>
+												<div class="card-sub-nav__text">Предлагаются уникальные виды кожаных пиджаков, для любой погоды. Они разработаны для максимальной простоты и текущему тренду</div>
+												<a href="#" class="card-sub-nav__link">Перейти</a>
+											</div>
+										</div>
+									</div>
+
+									<div class="sub-menu__popular sub-menu-popular">
+										<div class="sub-menu-popular__name">Популярное:</div>
+
+										<ul class="sub-menu-popular__list">
+											<li class="sub-menu-popular__item"><a href="#">Кожаные рубашки</a></li>
+											<li class="sub-menu-popular__item"><a href="#">топы</a></li>
+											<li class="sub-menu-popular__item"><a href="#">дубленки</a></li>
+											<li class="sub-menu-popular__item"><a href="#">косухи</a></li>
+											<li class="sub-menu-popular__item"><a href="#">шубы</a></li>
+											<li class="sub-menu-popular__item"><a href="#">пиджаки</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sub-nav__item --column-size-two sub-menu" id="sale">
+									<div class="sub-nav__row">
+										<div class="sub-nav__column">
+											<div class="sub-nav__card card-sub-nav">
+												<div class="card-sub-nav__image"><img src="./img/menu-card-image-1.png" alt="" /></div>
+												<div class="card-sub-nav__name">Для женщин</div>
+												<div class="card-sub-nav__text">Новые коллекции кожаных тренчей со скидкой до 30%</div>
+												<a href="#" class="card-sub-nav__link">Перейти</a>
+											</div>
+										</div>
+
+										<div class="sub-nav__column">
+											<div class="sub-nav__card card-sub-nav">
+												<div class="card-sub-nav__image"><img src="./img/menu-card-image-2.png" alt="" /></div>
+												<div class="card-sub-nav__name">Для мужчин</div>
+												<div class="card-sub-nav__text">Распродажа кожаных пиджаков, для любой погоды</div>
+												<a href="#" class="card-sub-nav__link">Перейти</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="sub-nav__item --column-size-three sub-menu" id="factory">
+									<div class="sub-nav__row">
+										<div class="sub-nav__column">
+											<div class="sub-nav__menu menu-sub-nav">
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Оптовикам</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Вакансии</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Контакты</a></li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="sub-nav__column">
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-4.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">Магазин</div>
+											</a>
+
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-5.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">О фабрике</div>
+											</a>
+
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-6.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">Наша история</div>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="sub-nav__item --column-size-three sub-menu" id="buyers">
+									<div class="sub-nav__row">
+										<div class="sub-nav__column">
+											<div class="sub-nav__menu menu-sub-nav">
+												<ul class="menu-sub-nav__list">
+													<li class="menu-sub-nav__item"><a href="#">Доставка</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Оплата и рассрочка</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Обмен и возврат</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Гарантии</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Кожа и обработка</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Руководство по уходу</a></li>
+													<li class="menu-sub-nav__item"><a href="#">Частые вопросы</a></li>
+												</ul>
+											</div>
+										</div>
+
+										<div class="sub-nav__column">
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-1.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">Индивидуальный пошив</div>
+											</a>
+
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-2.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">руководство по размерам</div>
+											</a>
+
+											<a href="#" class="sub-nav__card-category sub-nav-card-category">
+												<div class="sub-nav-card-category__image"><img src="./img/image-sub-nav-card-category-3.png" alt="" /></div>
+												<div class="sub-nav-card-category__name">Экологичность</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- // HEADER -->
+
 
 <main class="main hidden-func">
   <section class="main-screen">
