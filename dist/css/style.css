@@ -1988,7 +1988,8 @@ input::-webkit-inner-spin-button {
     visibility: hidden;
     -webkit-transform: translateY(50px);
         -ms-transform: translateY(50px);
-            transform: translateY(50px); }
+            transform: translateY(50px);
+    z-index: 1; }
   body:not(.device-apple) .product-card__size-list {
     display: -webkit-box;
     display: -ms-flexbox;

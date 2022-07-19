@@ -528,6 +528,8 @@
 				opacity: 0;
 				visibility: hidden;
 				transform: translateY(50px);
+
+				z-index: 1;
 			}
 	
 			&__size-list {
