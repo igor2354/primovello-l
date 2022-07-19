@@ -577,7 +577,14 @@ body.device-apple {
 			right: 15px;
 			bottom: 15px;
 
-			z-index: 6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			width: 40px;
+			height: 40px;
+
+			z-index: 10;
 		}
 
 		&__size-item {
@@ -644,7 +651,7 @@ body.device-apple {
 			right: 15px;
 			bottom: 15px;
 
-			z-index: 6;
+			z-index: 10;
 		}
 
 		&__size-item {

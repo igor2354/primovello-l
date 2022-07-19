@@ -1165,7 +1165,7 @@ document.addEventListener(
 			let element = e.target,
 				body = document.body
 
-			if (element.closest(".product-card__size-icon")) {
+			if (element.closest(".product-card__group-size")) {
 				cardProductSize = element.closest(".product-card__group-size");
 				cardProductSizeWrap = cardProductSize.querySelector(".product-card__size-wrap");
 
