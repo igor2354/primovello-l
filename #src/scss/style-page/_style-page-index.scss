@@ -403,6 +403,9 @@
 	flex-direction: column;
 	height: 100%;
 
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
 	&__link {
 		display: none;
 		position: absolute;
@@ -461,6 +464,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
+
 	}
 
 	&__size-wrap {
