@@ -1149,9 +1149,37 @@ document.addEventListener(
 		match[2].addListener(activeGallSliderMob);
 		activeGallSliderMob()
 
+		if (/iPhone|iPad|iPod|Mac/i.test(navigator.userAgent)) {
+			let body = document.querySelector("body");
+
+			if (body != null) {
+				body.classList.add("device-apple");
+			}
+		}
+
 		document.addEventListener("click", function (e) {
 			let element = e.target,
 				body = document.body
+
+			if (element.closest(".product-card__size-icon")) {
+				let cardProductSize = element.closest(".product-card__group-size");
+
+				if (cardProductSize != null) {
+					body.classList.add("lock");
+					cardProductSize.classList.add("active");
+				}
+
+			}
+
+			if (element.closest(".product-card__size-overlay")) {
+				let cardProductSize = element.closest(".product-card__group-size");
+
+				if (cardProductSize != null) {
+					body.classList.remove("lock");
+					cardProductSize.classList.remove("active");
+				}
+
+			}
 
 			if (element.closest(".zoom-gallery-container") && element.closest("[data-zoom]")) {
 				e.preventDefault();
@@ -1333,6 +1361,10 @@ document.addEventListener(
 			match[1].addListener(moveFirstWordMobil);
 			moveFirstWordMobil();
 		}
+
+		let instances = OverlayScrollbars(document.querySelector(".popup-domain__scroll"), {
+			sizeAutoCapable: false,
+		});
 	},
 	false
 );

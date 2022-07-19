@@ -43,7 +43,7 @@
 	&__body {
 		position: relative;
 		margin: 0 auto;
-		padding: 40px 40px 0 40px;
+		padding: 40px;
 		background-color: #fff;
 	}
 
@@ -69,13 +69,16 @@
 		}
 	}
 
-	&__list {
-		max-height: 500px;
+	&__scroll {
+		overflow-x: hidden;
+		overflow-y: auto;
+		height: 500px;
 		padding-bottom: 40px;
-		overflow: hidden;
+	}
+
+	&__list {
 		transition: all 0.3s ease;
         columns: 6;
-        overflow-y: auto;
 	}
 	&__item {
 		position: relative;
@@ -123,12 +126,15 @@
 
 @media (max-width: 1170px) {
 	.popup-domain {
+		&__scroll {
+			height: calc(100vh - 195px);
+		}
+	
 		&__list {
 			margin: 0;
             display: flex;
 			flex-wrap: wrap;
 			columns: initial;
-            max-height: calc(100vh - 150px);
 		}
 		&__item {
 			padding-left: 0;
@@ -146,7 +152,7 @@
 @media (max-width: 768px) {
 	.popup-domain {
 		&__body {
-			padding: 15px 15px 0 15px;
+			padding: 15px;
 		}
 
 		&__title {
@@ -173,9 +179,122 @@
 				top: 10px;
 			}
 		}
+
+		&__scroll {
+			height: calc(100vh - 130px);		
+		}
+
 		&__list {
 			margin: 0;
-            max-height: calc(100vh - 110px);
+		}
+	}
+}
+
+.header {
+	&__city {
+		margin-right: 30px;
+	}
+}
+
+.city-main {
+	cursor: pointer;
+	position: relative;
+
+	&__group {
+		display: flex;
+		align-items: center;
+	}
+
+	&__name {
+		margin-left: 10px;
+		font-size: 13px;
+		text-transform: uppercase;
+	}
+
+	&__popup {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: calc(100% + 20px);
+		left: 0;
+		padding: 15px;
+		background: #fff;
+		filter: drop-shadow(0 0px 15px rgba(0, 0, 0, 0.3));
+		transition: all 0.3s ease;
+		z-index: 10;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: -25px;
+			border: 10px solid transparent;
+			border-bottom: 15px solid #FFFFFF;
+			z-index: -1;
+		}
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__group-title {
+		display: flex;
+		margin-bottom: 15px;
+
+		& svg {
+			margin-right: 10px;
+			flex-shrink: 0;
+		}
+	}
+
+	&__title {
+		font-size: 13px;
+		text-transform: uppercase;
+		& a {
+			color: #000;
+			transition: all 0.3s ease;
+			&:hover {
+				text-shadow: 0px 0px 0px #000, 0px 0px 0px #000;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		white-space: nowrap;
+		padding: 5px 10px;
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+
+	}
+}
+
+
+@media (max-width: 768px) {
+	.header {
+		&__city {
+			margin-right: 19px;
+		}
+	}
+
+	.city-main {
+		&__name {
+			display: none;
+		}
+
+		&__popup {
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			&::before {
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
 		}
 	}
 }

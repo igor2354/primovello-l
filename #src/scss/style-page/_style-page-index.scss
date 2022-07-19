@@ -455,25 +455,44 @@
 		}
 	}
 
-	&__button {
+	&__group-size {
 		position: absolute;
 		width: initial;
-		left: 15px;
-		right: 15px;
-		bottom: 15px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
 
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(50px);
+	&__size-wrap {
 
-		transition: all 0.3s ease;
+	}
 
-		z-index: 1;
+	&__size-overlay {
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.8);
-			text-shadow: 0px 0px 0px black, 0px 0px 0px black;
-		}
+	}
+
+	&__size-body {
+
+	}
+
+	&__size-text {
+		font-size: 13px;
+		line-height: 120%;
+		text-transform: uppercase;
+		text-align: center;
+		color: #000;
+		margin-bottom: 15px;
+	}
+
+	&__size-list {
+
+	}
+
+	&__size-item {
+		padding: 5px 15px;
+		font-size: 13px;
+		line-height: 120%;
+		color: #000;
 	}
 
 	&__name {
@@ -494,18 +513,194 @@
 	}
 }
 
-@media (min-width: 1170px) {
-	.product-card {
-		&:hover {
-			& .product-card__button {
-				opacity: 1;
-				visibility: visible;
-				transform: translateY(0px);
-			}
 
-			& .product-card__fav {
-				opacity: 1;
-				visibility: visible;
+
+@media (min-width: 1170px) {
+	body:not(.device-apple) {
+		& .product-card {
+			&__group-size {
+				padding: 15px 10px 20px 10px;
+	
+				transition: all 0.3s ease;
+		
+				background: #fff;
+	
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(50px);
+			}
+	
+			&__size-list {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+	
+			&__size-item {
+				background: transparent;
+				transition: all 0.3s ease;
+				&:hover {
+					background: #ededeb;
+				}
+			}
+	
+			&__size-icon {
+				display: none;
+			}
+	
+			&:hover {
+				& .product-card__group-size {
+					opacity: 0.9;
+					visibility: visible;
+					transform: translateY(0px);
+				}
+	
+				& .product-card__fav {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}
+
+body.device-apple {
+	& .product-card {
+		&__group-size {
+			left: initial;
+			right: 15px;
+			bottom: 15px;
+
+			z-index: 6;
+
+			&.active {
+				z-index: 100;
+
+				& .product-card__size-wrap {
+					display: flex;
+				}
+			}
+		}
+
+		&__size-item {
+			padding: 10px;
+			border-bottom: 1px solid #ededeb;
+		}
+
+		&__size-text {
+			text-align: left;
+			text-transform: initial;
+			padding: 10px;
+			border-bottom: 1px solid #ededeb;
+			margin-bottom: 0;
+		}
+
+		&__size-wrap {
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+
+			flex-direction: column;
+
+			z-index: 100;
+
+			display: none;
+		}
+
+		&__size-overlay {
+			flex-grow: 1;
+			background: rgba(0,0,0,0.6);
+		}
+	
+		&__size-body {
+			position: relative;
+			background: #fff;
+
+			&::before {
+				content: "Таблица размеров";
+				position: absolute;
+				top: -40px;
+				left: 10px;
+				font-size: 12px;
+				line-height: 120%;
+				padding: 6px 14px;
+				border-radius: 15px;
+				color: #000;
+				background: #fff;
+			}
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.product-card {
+		&__group-size {
+			left: initial;
+			right: 15px;
+			bottom: 15px;
+
+			z-index: 6;
+
+			&.active {
+				z-index: 100;
+
+				& .product-card__size-wrap {
+					display: flex;
+				}
+			}
+		}
+
+		&__size-item {
+			padding: 10px;
+			border-bottom: 1px solid #ededeb;
+		}
+
+		&__size-text {
+			text-align: left;
+			text-transform: initial;
+			padding: 10px;
+			border-bottom: 1px solid #ededeb;
+			margin-bottom: 0;
+		}
+
+		&__size-wrap {
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+
+			flex-direction: column;
+
+			z-index: 100;
+
+			display: none;
+		}
+
+		&__size-overlay {
+			flex-grow: 1;
+			background: rgba(0,0,0,0.6);
+		}
+	
+		&__size-body {
+			position: relative;
+			background: #fff;
+
+			&::before {
+				content: "Таблица размеров";
+				position: absolute;
+				top: -40px;
+				left: 10px;
+				font-size: 12px;
+				line-height: 120%;
+				padding: 6px 14px;
+				border-radius: 15px;
+				color: #000;
+				background: #fff;
 			}
 		}
 	}
