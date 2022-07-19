@@ -1016,7 +1016,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 768px) {
   .search-result {
     overflow: auto;
-    max-height: calc(100vh - 200px); }
+    max-height: calc(100vh - 300px); }
     .search-result__row {
       grid-template-columns: 1fr;
       padding-right: 10px; }
