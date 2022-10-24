@@ -1,0 +1,159 @@
+.page-blog {
+	&__wrap {
+		padding: 35px 0;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	&__category {
+		margin-bottom: 25px;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 100px;
+		row-gap: 85px;
+		margin-bottom: 60px;
+	}
+
+	&__item {
+	}
+
+	&__pagination {
+		justify-content: center;
+	}
+}
+
+.blog-category {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		margin-bottom: 15px;
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+		& a {
+			padding-bottom: 2px;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 140%;
+			text-transform: uppercase;
+			color: #000000;
+			border-bottom: 1px solid transparent;
+			transition: all 0.3s ease;
+
+			&:hover,
+			&.current {
+				border-color: #c41616;
+			}
+		}
+	}
+}
+
+.card-blog {
+	min-height: 735px;
+	&__image {
+		margin-bottom: 15px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__group {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__group-date {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: #444444;
+	}
+
+	&__cat {
+		position: relative;
+		margin-right: 12px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -6px;
+			transform: translate(0, -50%);
+			width: 2px;
+			height: 2px;
+			background: #c41616;
+		}
+	}
+
+	&__date {
+	}
+
+	&__name {
+		margin-bottom: 20px;
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 120%;
+		color: #000000;
+	}
+
+	&__button {
+		max-width: 150px;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 140%;
+		color: #444444;
+		& a {
+			color: inherit;
+			border-bottom: 1px solid #444444;
+			transition: all 0.3s ease;
+			&:hover {
+				border-color: transparent;
+			}
+		}
+	}
+
+	&.--cover {
+		position: relative;
+		& .card-blog {
+			&__image {
+				margin-bottom: 0;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(34, 34, 34, 0.44) 100%);
+				}
+			}
+			&__group {
+				position: absolute;
+				bottom: 25px;
+				left: 10px;
+			}
+
+			&__group-date {
+				color: #fff;
+			}
+
+			&__name {
+				margin-bottom: 30px;
+				color: #fff;
+			}
+		}
+	}
+}
