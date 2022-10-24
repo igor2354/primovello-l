@@ -1,8 +1,6 @@
 document.addEventListener(
 	"DOMContentLoaded",
 	function () {
-
-
 		let arrSlidersProducts = Array.prototype.slice.call(document.querySelectorAll(".product-slider"));
 
 		if (arrSlidersProducts.length > 0) {
@@ -72,7 +70,16 @@ document.addEventListener(
 			spaceBetween: 20,
 		});
 
+		let sliderBlog = new Swiper(".sect-blog__slider .sect-blog__container", {
+			slidesPerView: 2,
+			watchOverflow: true,
+			spaceBetween: 26,
 
+			navigation: {
+				nextEl: ".sect-blog__slider .sect-blog__prev",
+				prevEl: ".sect-blog__slider .sect-blog__next",
+			},
+		});
 
 		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)"), window.matchMedia("(max-width: 900px)")];
 
@@ -986,7 +993,6 @@ document.addEventListener(
 			});
 		}
 
-
 		let seoFilter = document.querySelectorAll(".seo-filter");
 
 		if (seoFilter.length > 0) {
@@ -1092,8 +1098,8 @@ document.addEventListener(
 			let prodArrImages = Array.prototype.slice.call(document.querySelectorAll(".gallery-product__item"));
 
 			let index = prodArrImages.indexOf(targetEl);
-			
-			prodArrImages.forEach(el => el.classList.remove("active"));
+
+			prodArrImages.forEach((el) => el.classList.remove("active"));
 
 			targetEl.classList.add("active");
 
@@ -1111,7 +1117,7 @@ document.addEventListener(
 						nextEl: ".slider-gallery__next",
 						prevEl: ".slider-gallery__prev",
 					},
-					
+
 					on: {
 						init(swiper) {
 							prodArrImages[swiper.activeIndex].classList.add("active");
@@ -1125,21 +1131,21 @@ document.addEventListener(
 								video.play();
 							}
 
-							prodArrImages.forEach(el => el.classList.remove("active"));
+							prodArrImages.forEach((el) => el.classList.remove("active"));
 							prodArrImages[swiper.activeIndex].classList.add("active");
 						},
-					}
+					},
 				});
 
-				prodArrImages.forEach( function(element, index, array) {
+				prodArrImages.forEach(function (element, index, array) {
 					element.addEventListener("click", changeSlideGall);
 				});
 			} else {
 				if (sliderProductGall != undefined) {
 					sliderProductGall.destroy();
 
-					prodArrImages.forEach( function(element, index, array) {
-						element.classList.remove("active")
+					prodArrImages.forEach(function (element, index, array) {
+						element.classList.remove("active");
 						element.removeEventListener("click", changeSlideGall);
 					});
 				}
@@ -1147,7 +1153,7 @@ document.addEventListener(
 		}
 
 		match[2].addListener(activeGallSliderMob);
-		activeGallSliderMob()
+		activeGallSliderMob();
 
 		if (/iPhone|iPad|iPod|Mac/i.test(navigator.userAgent)) {
 			let body = document.querySelector("body");
@@ -1157,13 +1163,12 @@ document.addEventListener(
 			}
 		}
 
-		
 		let cardProductSize;
 		let cardProductSizeWrap;
 
 		document.addEventListener("click", function (e) {
 			let element = e.target,
-				body = document.body
+				body = document.body;
 
 			if (element.closest(".product-card__size-icon")) {
 				cardProductSize = element.closest(".product-card__group-size");
@@ -1182,28 +1187,27 @@ document.addEventListener(
 					cardProductSizeWrap.classList.remove("active");
 					cardProductSize.append(cardProductSizeWrap);
 				}
-
 			}
 
 			if (element.closest(".zoom-gallery-container") && element.closest("[data-zoom]")) {
 				e.preventDefault();
-		
+
 				let zoomGallerys = document.querySelector(".zoom-gallery");
 				let arrImages = Array.prototype.slice.call(element.closest(".zoom-gallery-container").querySelectorAll("[data-zoom]"));
-		
+
 				if (zoomGallerys != null) {
 					zoomGallerys.remove();
 				}
-		
+
 				let galleryZoom = document.createElement("div");
 				galleryZoom.classList.add("zoom-gallery");
-		
+
 				if (element.closest(".gallery-block-text")) {
 					galleryZoom.classList.add("zoom-gallery-block-text");
 				}
-		
+
 				body.append(galleryZoom);
-		
+
 				galleryZoom.innerHTML = `
 					<div class="zoom-gallery__close"></div>
 					<div class="zoom-gallery__slider swiper-container">
@@ -1222,15 +1226,15 @@ document.addEventListener(
 						</div>
 					</template>
 				`;
-		
-				[...new Set(arrImages.map(el => el.dataset.zoom))].forEach((element) => {
+
+				[...new Set(arrImages.map((el) => el.dataset.zoom))].forEach((element) => {
 					let clone = galleryZoom.querySelector("template").content.cloneNode(true);
-		
+
 					clone.querySelector("img").setAttribute("src", element);
-		
+
 					galleryZoom.querySelector(".zoom-gallery__wrapper").append(clone);
 				});
-		
+
 				let sliderZoom = new Swiper(galleryZoom.querySelector(".zoom-gallery__slider"), {
 					slidesPerView: 1,
 					initialSlide: arrImages.indexOf(element.closest("[data-zoom]")),
@@ -1239,7 +1243,7 @@ document.addEventListener(
 					observer: true,
 					observeParents: true,
 					zoom: true,
-		
+
 					on: {
 						zoomChange: (swiper, scale, imageEl, slideEl) => {
 							if (scale == 1) {
@@ -1250,7 +1254,7 @@ document.addEventListener(
 								imageEl.style.transition = "transform";
 							}
 						},
-		
+
 						afterInit: (swiper) => {
 							body.classList.add("lock");
 							setTimeout(() => {
@@ -1260,20 +1264,20 @@ document.addEventListener(
 							}, 100);
 						},
 					},
-		
+
 					navigation: {
 						nextEl: galleryZoom.querySelector(".zoom-gallery__next"),
 						prevEl: galleryZoom.querySelector(".zoom-gallery__prev"),
 					},
 				});
-		
+
 				galleryZoom.querySelector(".zoom-gallery__close").addEventListener("click", function () {
 					// fadeOut(galleryZoom, 300, 0, body);
 					galleryZoom.style.opacity = 0;
-		
+
 					body.classList.remove("lock");
 					document.querySelector("html") ? document.querySelector("html").classList.remove("lock") : null;
-		
+
 					setTimeout(() => {
 						sliderZoom.destroy(true, true);
 						galleryZoom.remove();
@@ -1287,9 +1291,8 @@ document.addEventListener(
 		let elLocationPopup = document.querySelector(".city-main__popup");
 		let elLocationBtn = document.querySelectorAll(".city-main__btn");
 
-
 		if (elLocation != null && elLocationPopup != null && elLocationBtn.length > 0) {
-			elLocationBtn.forEach(element => {
+			elLocationBtn.forEach((element) => {
 				element.addEventListener("click", () => {
 					elLocationPopup.classList.toggle("active");
 				});
