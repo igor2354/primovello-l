@@ -71,13 +71,25 @@ document.addEventListener(
 		});
 
 		let sliderBlog = new Swiper(".sect-blog__slider .sect-blog__container", {
-			slidesPerView: 2,
+			slidesPerView: "auto",
 			watchOverflow: true,
-			spaceBetween: 26,
+			spaceBetween: 15,
 
 			navigation: {
-				nextEl: ".sect-blog__slider .sect-blog__prev",
-				prevEl: ".sect-blog__slider .sect-blog__next",
+				nextEl: ".sect-blog__slider .sect-blog__next",
+				prevEl: ".sect-blog__slider .sect-blog__prev",
+			},
+
+			breakpoints: {
+				900: {
+					slidesPerView: 2,
+					spaceBetween: 26,
+				},
+
+				600: {
+					slidesPerView: 1,
+					spaceBetween: 26,
+				},
 			},
 		});
 
