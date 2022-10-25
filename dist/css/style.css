@@ -8289,7 +8289,8 @@ ul.dots-text {
   .col-blog__text {
     margin-bottom: 20px;
     font-size: 18px;
-    color: #fff; }
+    color: #fff;
+    line-height: 130%; }
   .col-blog__btn {
     max-width: 150px; }
     .col-blog__btn:hover {
