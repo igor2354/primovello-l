@@ -7919,6 +7919,8 @@ ul.dots-text {
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.05)), to(rgba(34, 34, 34, 0.44)));
         background: -o-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(34, 34, 34, 0.44) 100%);
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(34, 34, 34, 0.44) 100%); }
+    .card-blog.--cover .card-blog__cat {
+      color: #fff; }
     .card-blog.--cover .card-blog__group {
       position: absolute;
       bottom: 25px;
