@@ -7810,7 +7810,7 @@ ul.dots-text {
   .blog-category__item a {
     padding-bottom: 2px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 140%;
     text-transform: uppercase;
     color: #000000;
@@ -7830,14 +7830,8 @@ ul.dots-text {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .card-blog__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3; }
   .card-blog__image {
+    display: block;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
@@ -7864,7 +7858,14 @@ ul.dots-text {
     color: #444444; }
   .card-blog__cat {
     position: relative;
-    margin-right: 12px; }
+    margin-right: 12px;
+    color: #444444;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .card-blog__cat:hover {
+      border-color: #c41616; }
     .card-blog__cat::before {
       content: "";
       position: absolute;
@@ -7877,6 +7878,7 @@ ul.dots-text {
       height: 2px;
       background: #c41616; }
   .card-blog__name {
+    display: block;
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 30px;
@@ -7884,6 +7886,9 @@ ul.dots-text {
     color: #000000; }
   .card-blog__button {
     max-width: 150px; }
+    .card-blog__button:hover {
+      background: rgba(255, 255, 255, 0.8);
+      text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
   .card-blog__text {
     font-weight: 400;
     font-size: 14px;
@@ -7895,11 +7900,8 @@ ul.dots-text {
       -webkit-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       transition: all 0.3s ease; }
-  .card-blog:hover .card-blog__text a {
-    border-color: transparent; }
-  .card-blog:hover .card-blog__button {
-    background: rgba(255, 255, 255, 0.8);
-    text-shadow: 0px 0px 0px black, 0px 0px 0px black; }
+      .card-blog__text a:hover {
+        border-color: transparent; }
   .card-blog.--cover {
     position: relative; }
     .card-blog.--cover .card-blog__image {
@@ -8017,7 +8019,6 @@ ul.dots-text {
     width: 100%;
     margin: 30px auto; }
     .blog-article__text blockquote span {
-      font-weight: 700;
       font-style: italic;
       font-size: 18px;
       line-height: 140%;
