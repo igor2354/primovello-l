@@ -1180,7 +1180,19 @@ document.addEventListener(
 
 		document.addEventListener("click", function (e) {
 			let element = e.target,
-				body = document.body;
+				body = document.body,
+				scrollAnim = element.getAttribute("data-scroll-to-anim"),
+				scrollAnimParent = element.closest("[data-scroll-to-anim]") != null ? element.closest("[data-scroll-to-anim]").getAttribute("data-scroll-to-anim") : null;
+
+			if (scrollAnim != null || scrollAnimParent != null) {
+				scrollAnim = scrollAnim != null ? scrollAnim : scrollAnimParent;
+				let scrollAnimTo = scrollAnim != "" && (scrollAnim[0] == "." || scrollAnim[0] == "#" || scrollAnim[0] == "[") ? body.querySelector(scrollAnim) : null,
+					scrollAnimToPx = scrollAnimTo != null ? scrollAnimTo.getBoundingClientRect().top + window.pageYOffset : 0;
+				window.scrollTo({
+					top: scrollAnimToPx,
+					behavior: "smooth",
+				});
+			}
 
 			if (element.closest(".product-card__size-icon")) {
 				cardProductSize = element.closest(".product-card__group-size");
