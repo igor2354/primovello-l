@@ -93,6 +93,29 @@ document.addEventListener(
 			},
 		});
 
+		let sliderReviw = new Swiper(".sect-review__slider .sect-review__container", {
+			slidesPerView: "auto",
+			watchOverflow: true,
+			spaceBetween: 25,
+
+			navigation: {
+				nextEl: ".sect-review__slider .sect-review__next",
+				prevEl: ".sect-review__slider .sect-review__prev",
+			},
+
+			breakpoints: {
+				1170: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 26,
+				},
+			},
+		});
+
 		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)"), window.matchMedia("(max-width: 900px)")];
 
 		let stocks = document.querySelector(".stocks");
