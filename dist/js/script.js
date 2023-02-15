@@ -93,6 +93,29 @@ document.addEventListener(
 			},
 		});
 
+		let sliderReviw = new Swiper(".sect-review__slider .sect-review__container", {
+			slidesPerView: "auto",
+			watchOverflow: true,
+			spaceBetween: 25,
+
+			navigation: {
+				nextEl: ".sect-review__slider .sect-review__next",
+				prevEl: ".sect-review__slider .sect-review__prev",
+			},
+
+			breakpoints: {
+				1170: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 26,
+				},
+			},
+		});
+
 		let match = [window.matchMedia("(max-width: 768px)"), window.matchMedia("(max-width: 1170px)"), window.matchMedia("(max-width: 900px)")];
 
 		let stocks = document.querySelector(".stocks");
@@ -1180,7 +1203,19 @@ document.addEventListener(
 
 		document.addEventListener("click", function (e) {
 			let element = e.target,
-				body = document.body;
+				body = document.body,
+				scrollAnim = element.getAttribute("data-scroll-to-anim"),
+				scrollAnimParent = element.closest("[data-scroll-to-anim]") != null ? element.closest("[data-scroll-to-anim]").getAttribute("data-scroll-to-anim") : null;
+
+			if (scrollAnim != null || scrollAnimParent != null) {
+				scrollAnim = scrollAnim != null ? scrollAnim : scrollAnimParent;
+				let scrollAnimTo = scrollAnim != "" && (scrollAnim[0] == "." || scrollAnim[0] == "#" || scrollAnim[0] == "[") ? body.querySelector(scrollAnim) : null,
+					scrollAnimToPx = scrollAnimTo != null ? scrollAnimTo.getBoundingClientRect().top + window.pageYOffset : 0;
+				window.scrollTo({
+					top: scrollAnimToPx,
+					behavior: "smooth",
+				});
+			}
 
 			if (element.closest(".product-card__size-icon")) {
 				cardProductSize = element.closest(".product-card__group-size");
